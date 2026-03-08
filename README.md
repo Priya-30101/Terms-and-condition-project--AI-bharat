@@ -1,5 +1,17 @@
 # Terms-and-condition-project--AI-bharat
-This project builds an AI and NLP powered system that makes long and complicated Terms &amp; Conditions easy to understand. It automatically finds important clauses, highlights possible risks, and converts legal language into simple summaries, and also provide voice explanations.The pyhton code that is used is:
+This project builds an AI and NLP powered system that makes long and complicated Terms &amp; Conditions easy to understand. It automatically finds important clauses, highlights possible risks, and converts legal language into simple summaries, and also provide voice explanations.
+# AI Model & Cloud Services
+
+# AI Model
+- TinyLlama – Used to analyze Terms & Conditions and generate summaries and risk scores.
+- Ollama – Used to run the TinyLlama model locally for fast inference.
+
+# AWS Cloud Services
+- Amazon EC2 – Hosting the backend server and running the application.
+- Amazon DynamoDB – Storing user data and analysis results.
+- Amazon S3 – Storing uploaded Terms & Conditions documents.
+- AWS Lambda – Processing uploaded documents.
+Backend code :
 
 from fastapi import FastAPI, UploadFile, File
 import pdfplumber
@@ -8,7 +20,7 @@ import requests
 app = FastAPI()
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "llama3"
+MODEL_NAME = "tinyllama"
 
 
 def analyze_contract(text):

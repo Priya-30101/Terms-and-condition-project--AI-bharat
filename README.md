@@ -11,6 +11,8 @@ This project builds an AI and NLP powered system that makes long and complicated
 - Amazon DynamoDB – Storing user data and analysis results.
 - Amazon S3 – Storing uploaded Terms & Conditions documents.
 - AWS Lambda – Processing uploaded documents.
+
+
 Backend code :
 
 from fastapi import FastAPI, UploadFile, File
